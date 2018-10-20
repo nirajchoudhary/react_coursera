@@ -29,12 +29,13 @@ class Menu extends Component {
                         </Card>
                     </div>
                     <div className="col-12 col-md-8">
+                        <h4>Comments</h4>
                         {
                             dish.comments.map((comment) => {
                                 return (
                                     <blockquote key={comment.id} className="blockquote text-left">
                                         <p className="mb-0">{comment.comment}</p>
-                                        <footer className="blockquote-footer text-right">{comment.author} <cite >{comment.date}</cite></footer>
+                                        <footer className="blockquote-footer text-right">{comment.author}, <cite >{comment.date}</cite></footer>
                                     </blockquote>
                                 )
                             })
